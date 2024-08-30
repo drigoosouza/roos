@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+$bgcolor-primary: #fdfdfd;
+$colorfont-primary: #8a349b;
+$colorfont-secound: #282828;
+$font-primary: "poppins";
+$Wscreen-max: 1220px;
+
+@mixin center-section{
+  display: flex;
+  align-items: center;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color:$bgcolor-primary ;
+  @include center-section;
+  flex-direction: column;
+}
+header{
+  width: 100%;
+  @include center-section;
+  justify-content: center;
+  .screen-max-header{
+    //background-color:#be0000;
+    width: $Wscreen-max;
+    @include center-section;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:30px;
+    padding: 1rem 0;
+    .logo-header{
+      .img-logo-header{
+        width: 50px;
+      }
+    }
+    .nav-header{
+      @include center-section;
+      gap: 40px;
+      a{
+        position: relative;
+        font-size: 0.9rem;
+        color: $colorfont-secound ;
+        text-decoration: none;
+        font-family:$font-primary ;
+        font-weight:500;
+      
+        &::before{
+          position: absolute;
+          content: "";
+          bottom:-3px;
+          left: 0;
+          height: 2px;
+          width: 0;
+          background-color: $colorfont-primary;
+          text-shadow: 1px .5px 5px #00000000;
+          transition: all 0.4s;
+        }
+        &:hover::before{
+          width: 100%;
+        }
+      }
+      div{
+        @include center-section;
+        justify-content: center;
+        height: 100px;
+        width: 225px;
+        margin-left: 90px;
+        .button-whatsapp{
+          @include center-section;
+          gap: 10px;
+          background-color: $bgcolor-primary;
+          border-color: $colorfont-primary;
+          border-radius: 5rem;
+          padding: 12px;
+          border: none;
+          border: 2.5px solid $colorfont-primary;
+          transition: all 0.3s linear;
+          cursor: pointer;
+          p{
+            font-family: $font-primary; 
+            font-size: 1.1em;
+            font-weight: 500;
+          }
+        
+          &:hover{
+            //animation: hoverButton 0.4s linear;
+            border-bottom: 5px solid $colorfont-primary;
+            border-right: 5px solid $colorfont-primary;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+main{
+  padding: 5em 0;
+  .screen-max-main{
+    //background-color: aqua;
+    width: $Wscreen-max;
+    
+    font-family:$font-primary;
+    @include center-section;
+    gap: 90px;
+    justify-content: space-between;
+    .text-titles-main{
+      width: 580px;
+      h1{
+        font-size: 2.8em;
+        text-transform: uppercase;
+        color: $colorfont-secound;
+        strong{   
+          color: $colorfont-primary;
+          text-decoration: none;
+          b{
+            font-size: 35px;
+          }
+        }
+      }
+      p{
+        width: 500px;
+        text-align: justify;
+        margin:2em 0;
+        color:#4b4b4b ;
+        font-size: 14px;
+        font-stretch:expanded;
+      }
+      div{
+        button{
+          margin-top: 1em;
+          padding: 15px;
+          font-size: 1em;
+          font-weight: 600;
+          border: 2px solid $colorfont-primary;
+          background-color: $bgcolor-primary;
+          border-radius: 40px;
+          color: $colorfont-primary;
+          transition: all 0.5s;
+          cursor: pointer;
+          &:hover{
+            color: $bgcolor-primary;
+            background-color: $colorfont-primary;
+          }
+        }
+      }
+    }
+    img{
+      width: 530px;
+    }
+  }
+}
+.portifolio-section{
+    margin: 4em;
+    .slide{
+      overflow: hidden;
+      width: 800px;
+      .container-carroussel{
+        display: flex;
+        
+        transition: all 0.4s;
+        picture{
+          img{
+            width: 800px;
+          }
+        }
+      }
+    }
+    .section-arrows{
+      @include center-section;
+      justify-content: space-between;
+      .arrows{
+        @include center-section();
+        position: relative;
+        top: -200px;
+        border-radius: 50%;
+        background-color: $colorfont-primary;
+        font-size: 4rem;
+        padding: 10px;
+        color: $bgcolor-primary;
+        transition: transform 0.4s linear;
+        cursor: pointer;
+        border: none;
+        &:hover{
+          transform: scale(1.1);
+        }
+        &:disabled{
+          background-color: #4b4b4b3f;
+          cursor:default;
+          &:hover{
+            transform: scale(1);
+          }
+        }
+      }
+      .arrow-left{
+        left:-40px;
+      }
+      .arrow-right{
+        right:-40px;
+      }
+      div{
+        @include center-section();
+        gap: 30px;
+        .slide-on{
+          border-radius: 50%;
+          color: $colorfont-primary;
+          background-color: $colorfont-primary;
+          border: none;
+          width: 20px;
+          height: 20px;
+          transition: all 0.4s;
+          &:disabled{
+            background-color: #4b4b4b3f;
+          }
+        }
+      }
+    }
+}
+
+.service{
+  padding: 50px 0;
+  background-color: #d747f5;
+  background-image: linear-gradient(208deg, #d747f5 0%, #8a2899 50%, #8a349b 100%);
+
+  width: 100%;
+  @include center-section();
+  flex-direction: column;
+  .service-title{
+    font-family: $font-primary;
+    text-align: center;
+    padding-bottom: 30px;
+    p{
+      font-weight: 700;
+      color: $colorfont-secound;
+    }
+    h2{
+      font-size: 2em;
+      color: $bgcolor-primary ;
+    }
+  }
+  .grid-type-services{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: $Wscreen-max;
+    gap: 30px ;
+    flex-wrap: wrap;
+
+   
+    .card-service{
+      font-family: $font-primary;
+      padding: 32px;
+      border-radius: 20px;
+      transition: transform 0.2s linear;
+      background-color: $bgcolor-primary;
+      .circle-icon{
+        @include center-section();
+        justify-content: center;
+        background-color: #ffd9004d;
+        width: 50px;
+        height: 50px;
+        border-radius: 20% 50% 30% 50%;
+         ion-icon{
+          color: $colorfont-primary;
+          font-size: 30px;
+        }       
+      }
+      h2{
+        color: $colorfont-primary;
+        font-weight: 600;
+      }
+      p{
+        text-align: justify;
+        margin-top: 5px;
+        color:#4b4b4b;
+        font-size: 13px;
+      }
+      &:hover{
+        transform: scale(1.05);
+      }
+    }
+  }
+}
