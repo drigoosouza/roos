@@ -1,10 +1,10 @@
 import VanillaTilt from '../node_modules/vanilla-tilt/src/vanilla-tilt.js';
 
-VanillaTilt.init(document.querySelector(".your-element"), {
-  max: 10,
-  speed: 900,
+VanillaTilt.init(document.querySelectorAll(".your-element"), {
+  max: 18,
+  speed: 800,
   glare : true,
-  "max-glare" : 0.1,
+  "max-glare" : 0.5,
   gyroscope : true
 });
 console.log("oi")

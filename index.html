@@ -4,20 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/index.css">
-  <title>Rsites</title>
+  <link rel="shortcut icon" href="./assets/img/favicon.jpg" type="image/x-icon" sizes="20x20">
+  <title>Agência RooS | Criação De Sites Profissionais </title>
 </head>
 <body>
   
     <header id="HEADER">
       <div class="screen-max-header">
-        <a href="" class="logo-header"><img class="img-logo-header" src="./assets/img/logo Rtech.png" alt="logo da Rsites"></a>
-        <nav class="nav-header">
-          <a href="">HOME</a>
-          <a href="">PORTIFÓLIO</a>
-          <a href="">SERVIÇOS</a>
-          <a href="">CONTATO</a>
-
-          <div>
+        <a href="./index.html" class="logo-header"><img class="img-logo-header" src="./assets/img/favicon.jpg" alt="logo da Rsites"></a>
+        <nav id="sidebar" class="nav-header" onclick="sidebarbar()">
+          <div class="img-nav"><img src="./assets/img/RooS-new.png" alt="logo da Rsites"></div>
+          <a href="./index.html"><ion-icon name="home"></ion-icon>Home</a>
+          <a href="#SERVICE" title="Serviços"><ion-icon name="attach-sharp"></ion-icon>Serviços</a>
+          <a href="#PORTIFOLIO" title="Portifólio"><ion-icon name="albums"></ion-icon>Portifólio</a>
+          <a href="#CONTACT" title="Contato"><ion-icon name="call"></ion-icon>Contato</a>
+          <div class="button-nav">
             <button class="button-whatsapp">
               <lord-icon
                 src="https://cdn.lordicon.com/cywksamr.json"
@@ -29,7 +30,31 @@
               <p>(71) 9 9369-8399</p>
             </button>
           </div>
+          <div class="add-info-mobile">
+            <div>
+              <a href=""><ion-icon name="logo-whatsapp"></ion-icon></a>
+              <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+              <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+            </div>
+          </div>
         </nav>
+        <div class="div-button-whatsapp">
+          <button class="button-whatsapp">
+            <lord-icon
+              src="https://cdn.lordicon.com/cywksamr.json"
+              trigger="hover"
+              stroke="bold"
+              state="hover-draw"
+              colors="primary:#8a349b,secondary:#8a349b">
+            </lord-icon>
+            <p>(71) 9 9369-8399</p>
+          </button>
+        </div>
+        <div class="hamburger-menu" onclick="sidebarbar()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
 
@@ -37,40 +62,17 @@
       <div class="screen-max-main">
         <div class="text-titles-main ">
           <h1>Mostre seu serviço para o mundo com a <strong>R<b>oo</b>S</strong>. desenvolvendo site para o <strong>seu negócio</strong></h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, voluptates. Amet odit maxime cupiditate deleniti corrupti culpa unde enim necessitatibus?</p>
           <div>
             <button>Faça seu orçamento</button>
           </div>
         </div>
-        <img class="your-element" src="./assets/img/logo Rtech main.png" alt="">
+        <img class="" src="./assets/img/logo Rtech main.png" alt="">
       </div>
     </main>
-
-    <section class="portifolio-section">
-      <div class="slide">
-        <div class="container-carroussel">
-          <picture>
-            <source media="(min-width: )" srcset="">
-            <img class="img-portifolio" src="./assets/img/site-spa.png" alt="">
-          </picture>
-          <picture>
-            <source media="(min-width: )" srcset="">
-            <img class="img-portifolio" src="./assets/img/site-fotografia.png" alt="">
-          </picture>
-        </div>
-      </div>
-      <div class="section-arrows">
-        <button class="arrow-left arrows" onclick="scrolly(-1)" disabled><ion-icon name="arrow-back-outline"></ion-icon></button>
-        <div>
-            <button class="slide-on slide-on-left" disabled>.</button>
-            <button class="slide-on slide-on-right">.</button>
-        </div>
-        <button class="arrow-right arrows" onclick="scrolly(1)"><ion-icon name="arrow-forward-outline"></ion-icon></button>
-      </div>
-    </section>
-    <section class="service">
+    
+    <section id="SERVICE" class="service">
       <div class="service-title">
-        <p>NOSSOS SERVIÇOS</p>
+        <p >NOSSOS SERVIÇOS</p>
         <h2>O QUE PODEMOS TE OFERECER?</h2>
       </div>
       <div class="grid-type-services">
@@ -79,52 +81,151 @@
           
           <div class="card-service-texts">
             <h2 class="card-sevice-text-title">Landing Page</h2>
-            <p class="card-sevice-text-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam aliquam similique recusandae eaque quia hic!</p>
+            <p class="card-sevice-text-content">Site de página única, ideal para apresentar sua empresa, produto ou serviço de forma clara e objetiva, proporcionando aos usuários uma experiência simples e direta.</p>
           </div>
         </div>
         <div class="card-service" >
           <div class="circle-icon"><ion-icon name="business-outline"></ion-icon></div>
           <div class="card-service-texts">
             <h2 class="card-sevice-text-title">Site Institucional</h2>
-            <p class="card-sevice-text-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam aliquam similique recusandae eaque quia hic!</p>
+            <p class="card-sevice-text-content">É o endereço da sua empresa na web, onde seu negócio é representado em páginas virtuais que promovem sua marca, seus produtos e seus serviços.</p>
           </div>
         </div>
         <div class="card-service" >
           <div class="circle-icon"><ion-icon name="cash-outline"></ion-icon></div>
           <div class="card-service-texts">            
             <h2 class="card-sevice-text-title">Página de Vendas</h2>
-            <p class="card-sevice-text-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam aliquam similique recusandae eaque quia hic!</p>
+            <p class="card-sevice-text-content">Uma página de vendas é um site exclusivo, criado especialmente para destacar e vender um produto ou serviço, focando em atrair e converter visitantes em clientes.</p>
           </div>
         </div>
         <div class="card-service" >
           <div class="circle-icon"><ion-icon name="people-outline"></ion-icon></div>
           <div class="card-service-texts">
             <h2 class="card-sevice-text-title">Portifólio</h2>
-            <p class="card-sevice-text-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam aliquam similique recusandae eaque quia hic!</p>
+            <p class="card-sevice-text-content">É uma coleção de trabalhos e projetos que demonstram as habilidades, competências e experiências de um profissional, empresa ou estudante.</p>
           </div>
         </div>
         <div class="card-service" >
-          <div class="circle-icon"><ion-icon name="finger-print-outline"></ion-icon></div>
+          <div class="circle-icon"><ion-icon name="cart-outline"></ion-icon></div>
           <div class="card-service-texts">
-            <h2 class="card-sevice-text-title">Identidade Visual</h2>
-            <p class="card-sevice-text-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam aliquam similique recusandae eaque quia hic!</p>
+            <h2 class="card-sevice-text-title">Loja Virtual</h2>
+            <p class="card-sevice-text-content">Lojas virtuais permitem aos consumidores verificar uma variedade de produtos e realizar compras online. Exemplos incluem Shopee, Mercado Livre e outras plataformas no mercado.</p>
           </div>
         </div>
         <div class="card-service" >
           <div class="circle-icon"><ion-icon name="color-palette-outline"></ion-icon></div>
           <div class="card-service-texts">
             <h2 class="card-sevice-text-title">Artes visuais</h2>
-            <p class="card-sevice-text-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam aliquam similique recusandae eaque quia hic!</p>
+            <p class="card-sevice-text-content">Banners, cards e outras artes visuais personalizadas para fortalecer suas redes sociais e impulsionar seu negócio online.</p>
           </div>
         </div>
       </div>
 
     </section>
+
+    <section id="PORTIFOLIO" class="portifolio-section">
+      <div class="title-portifolio">
+        <p >PORTIFÓLIO</p>
+        <h2>UM POUCO DO NOSSO TRABALHO</h2>
+      </div>
+      <div class="bg-portifolio">
+        
+        <div class="card-portifolio">
+          <div class="text-card-portifolio text-card-portifolio-right">
+            <h2>SPA Nadja Matoso</h2>
+            <p>SPA Terapéutico especializado no tratamento de dor</p>
+            <a href="">Acesse o site</a>
+          </div>
+          <img class="img-mockup your-element" src="./assets/img/mockup-site-spa-tela.png" alt="" loading="lazy">
+        </div>
+        <div class="card-portifolio card-portifolio2">
+          <img class="img-mockup your-element" src="./assets/img/mockup-site-fotografia-tela.png" alt="" loading="lazy">
+          <div class="text-card-portifolio ">
+            <h2>Portifólio Fotografia</h2>
+            <p>Site portifólio exclusivo para fotógrafos.</p>
+            <a href="https://jaovictor.netlify.app/" target="_blank">Acesse o site</a>
+          </div>
+        </div>
+        <div class="card-portifolio">
+          <div class="text-card-portifolio text-card-portifolio-right">
+            <h2>Site informativo Akatsuki</h2>
+            <p>Site informativo e entretenimento pessoal.</p>
+            <a href="https://akatisuki.netlify.app" target="_blank">Acesse o site</a>
+          </div>
+          <img class="img-mockup your-element" src="./assets/img/mockup-site-akatsuki-tela.png" alt="" loading="lazy">
+        </div>
+      </div>      
+    </section>
+
+    <section id="CONTACT" class="contact-section">
+      <svg xmlns="http://www.w3.org/2000/svg" class="wave-border" viewBox="0 0 1081 131">
+        <path id="Forma_2" data-name="Forma 2" class="cls-1" d="M-11-11.371S20.546,50.652,116.254,60.276,268.1,38.354,351.513,43.166c197.3-8.02,297.281,76.994,471.587,84.48S1113.43-20.46,1143.91-9.232-11-11.371-11-11.371Z"/>
+      </svg>
+      <div class="title-contact">
+        <p> CONTATO</p>
+        <h2>ENTRE EM CONTATO CONOSCO</h2>
+      </div>
+      <div class="bg-contact">
+        <div class="section-form-contact">
+          <form action="">
+            <input type="text" name="" id="" placeholder="Nome">
+            <input type="text" name="" id="" placeholder="Sobrenome">
+            <input type="email" name="" id="" placeholder="E-mail">
+            <input type="text" name="" id="" placeholder="Assunto">
+            <textarea name="" id="" placeholder="Menssagem" cols="10" rows="10"></textarea>
+            <button class="btn-form-contact" type="submit">enviar</button>
+          </form>
+        </div>
+        <div class="section-img-contact">
+          <img src="./assets/img/favicon.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-site">
+      <div class="bg-footer-site">
+        <div class="section-footer section-footer1">
+          <img src="./assets/img/RooS-new.png" alt="">
+          <p>agência roos, criando site para o seu serviço.</p> 
+          <p>Te ajudando a faturar ainda mais! </p>
+        </div>
+        <div class="section-footer">
+          <h3>Institucional</h3>
+          <a href="./index.html">home</a>
+          <a href="#SERVICE">serviço</a>
+          <a href="#PORTIFOLIO">portifolio</a>
+        </div>
+        <div class="section-footer">
+          <h3>Contato</h3>
+          <a href="#CONTACT">fale conosco</a>
+        </div>
+        <div class="section-footer section-footer4">
+          <h3>Rede Social</h3>
+          <div>
+            <a href=""><ion-icon name="logo-whatsapp"></ion-icon></a>
+            <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+          </div>
+        </div>
+        <div class="section-footer section-footer5">
+          <div>
+            <h3>Se Mantenha Informado:</h3>
+            <input type="email" name="" id="" placeholder="email">
+            <button>enviar</button>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+
+    <footer class="footer-dev">
+     <p>© Copyright 2024 Agência RooS. Todos os Direitos Reservados.</p> 
+    </footer>
+   
  
   <script type="module" src="./script/tilt.js"></script>
   <script src="./script/index.js"></script>
   <script src="https://cdn.lordicon.com/lordicon.js"></script>
- 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
