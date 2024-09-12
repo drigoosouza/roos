@@ -57,11 +57,13 @@ $Wscreen-max: 1220px;
 button{
   cursor: pointer;
 }
+html{
+  overflow-x: hidden;
+}
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 body{
   background-color:$bgcolor-primary ;
