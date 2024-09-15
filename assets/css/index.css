@@ -806,18 +806,20 @@ main .screen-max-main img {
 @media (max-width: 530px) {
   .portifolio-section .bg-portifolio {
     display: flex;
-    gap: 20px;
-    padding: 1rem 3rem 4rem 3rem;
+    gap: 2.5rem;
+    padding: 1.5rem 3rem 4rem 3rem;
     overflow-x: auto;
   }
   .portifolio-section .bg-portifolio::-webkit-scrollbar {
     width: 0;
   }
   .portifolio-section .bg-portifolio .card-portifolio {
+    position: relative;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #d747f5;
-    background-image: linear-gradient(208deg, #d747f5 0%, #8a2899 50%, #8a349b 100%);
+    background-color: #f7f7f7;
+    border-top: 5px solid #fdfdfd;
+    border-right: 5px solid #fdfdfd;
     padding: 2rem;
     margin: 0;
     border-radius: 20px;
@@ -827,23 +829,37 @@ main .screen-max-main img {
     text-align: center;
   }
   .portifolio-section .bg-portifolio .card-portifolio .text-card-portifolio h2 {
-    color: #fdfdfd;
+    color: #8a349b;
     margin: 0;
     white-space: nowrap;
   }
   .portifolio-section .bg-portifolio .card-portifolio .text-card-portifolio p {
-    color: #e4e4e4;
+    color: #414141;
     margin: 5px 0 20px 0;
   }
   .portifolio-section .bg-portifolio .card-portifolio .text-card-portifolio a {
     color: #fdfdfd;
-    background-color: #282828;
+    background-image: linear-gradient(208deg, #d847f5 0%, #8a2899 50%, #d847f5 100%);
+    box-shadow: 10px 10px 60px -15px #000000;
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 1.5rem;
     border-radius: 20px;
+    font-weight: 600;
   }
   .portifolio-section .bg-portifolio .card-portifolio img {
     order: -1;
+  }
+  .portifolio-section .bg-portifolio .card-portifolio::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #8a349b;
+    top: -1.8rem;
+    right: -1.7rem;
+    border-radius: 25px;
+    opacity: 0.4;
+    z-index: -1;
   }
   .footer-site .bg-footer-site .section-footer1 img {
     width: 150px;

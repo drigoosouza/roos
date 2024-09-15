@@ -837,18 +837,21 @@ main{
   .portifolio-section{
     .bg-portifolio{
       display: flex;
-      gap: 20px;
-      padding: 1rem 3rem 4rem 3rem;
+      gap: 2.5rem;
+      padding: 1.5rem 3rem 4rem 3rem;
       overflow-x: auto;
       &::-webkit-scrollbar{
         width: 0;
         
       }
       .card-portifolio{
+        position: relative;
         flex-direction: column;
         justify-content: space-between;
-        background-color: #d747f5;
-        background-image: linear-gradient(208deg, #d747f5 0%, #8a2899 50%, #8a349b 100%);
+        background-color: #f7f7f7;
+       // background-image: linear-gradient(208deg, #d847f52d 0%, #8a289927 50%, #d847f523 100%);
+        border-top:5px solid $bgcolor-primary;
+        border-right:5px solid $bgcolor-primary;
         padding: 2rem ;
         margin: 0;
         border-radius: 20px;
@@ -856,25 +859,40 @@ main{
         .text-card-portifolio{
           text-align: center;
           h2{
-            color: $bgcolor-primary;
+            color: $colorfont-primary;
             margin: 0;
             white-space: nowrap;
           }
           p{
-            color: #e4e4e4;
+            color: #414141;
             margin: 5px 0 20px 0;
           }
           a{
-            color: $bgcolor-primary;
-            background-color: $colorfont-secound;
+            color:$bgcolor-primary;
+            background-image: linear-gradient(208deg, #d847f5 0%, #8a2899 50%, #d847f5 100%);
+            box-shadow: 10px 10px 60px -15px #000000;
             text-decoration: none;
-            padding: 10px;
+            padding: 10px 1.5rem;
             border-radius: 20px;
+            font-weight: 600;
             
           }
         }
         img{
          order: -1;
+        }
+
+        &::before{
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: $colorfont-primary;
+          top: -1.8rem;
+          right: -1.7rem;
+          border-radius: 25px;
+          opacity: .4;
+          z-index: -1;
         }
       }
     }
