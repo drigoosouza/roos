@@ -1,4 +1,4 @@
-import VanillaTilt from '../node_modules/vanilla-tilt/src/vanilla-tilt.js';
+import VanillaTilt from './vanilla-tilt.js';
 
 VanillaTilt.init(document.querySelectorAll(".your-element"), {
   max: 18,

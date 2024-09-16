@@ -122,7 +122,13 @@ header{
       }
       .button-nav{
         @include center-section();
-       @include whatsapp();
+        @include whatsapp();
+
+        &:hover::before{
+          width: 0;
+        
+        
+       }
       }
       .add-info-mobile{
         display: none;

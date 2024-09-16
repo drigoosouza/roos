@@ -107,6 +107,9 @@ header .screen-max-header .nav-header .button-nav .button-whatsapp:hover {
   border-right: 5px solid #8a349b;
   transform: scale(1.1);
 }
+header .screen-max-header .nav-header .button-nav:hover::before {
+  width: 0;
+}
 header .screen-max-header .nav-header .add-info-mobile {
   display: none;
 }
