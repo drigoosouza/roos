@@ -225,9 +225,9 @@ main .screen-max-main .text-titles-main p {
   font-stretch: expanded;
 }
 main .screen-max-main .text-titles-main div {
-  margin-top: 20px;
+  margin-top: 50px;
 }
-main .screen-max-main .text-titles-main div button {
+main .screen-max-main .text-titles-main div a {
   right: 0;
   text-align: right;
   margin-top: 1em;
@@ -239,9 +239,10 @@ main .screen-max-main .text-titles-main div button {
   border-radius: 40px;
   color: #8a349b;
   transition: all 0.5s;
+  text-decoration: none;
   cursor: pointer;
 }
-main .screen-max-main .text-titles-main div button:hover {
+main .screen-max-main .text-titles-main div a:hover {
   color: #fdfdfd;
   background-color: #8a349b;
 }

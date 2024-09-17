@@ -221,9 +221,8 @@ main{
         font-stretch:expanded;
       }
       div{
-        margin-top: 20px;
-        button{
-          
+        margin-top: 50px;
+        a{
           right: 0;
           text-align: right;
           margin-top: 1em;
@@ -235,6 +234,7 @@ main{
           border-radius: 40px;
           color: $colorfont-primary;
           transition: all 0.5s;
+          text-decoration: none;
           cursor: pointer;
           &:hover{
             color: $bgcolor-primary;

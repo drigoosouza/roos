@@ -16,7 +16,7 @@ function sidebarbar (){
 }
 
 function scrollSmooth(){
-  const a = document.querySelectorAll(".nav-header a[href^='#']")
+  const a = document.querySelectorAll("a[href^='#']")
   
   function smoothScrollTo(endX, endY, duration) {
     const startX = window.scrollX || window.pageXOffset;
@@ -50,14 +50,19 @@ function scrollSmooth(){
       let element = ev.target
       let ID = element.getAttribute("href")
       const topscrool = document.querySelector(ID).offsetTop
-      const distanceFromTheTop = topscrool - 70
+      const distanceFromTheTop = topscrool - 120
 
       smoothScrollTo(0,distanceFromTheTop)
-
+      console.log(element)
+      console.log(ID)
       console.log(distanceFromTheTop)
     })
   })
 }
+
+
+
+
 
 headerfixed()
 scrollSmooth()
