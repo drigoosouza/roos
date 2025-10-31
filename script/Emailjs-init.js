@@ -1,5 +1,3 @@
-
-
 const form = document.getElementById('contactForm')
 form.addEventListener('submit', async function sendemail(e) {
   e.preventDefault()
@@ -59,7 +57,4 @@ form.addEventListener('submit', async function sendemail(e) {
     },10000);
   }
 })
-
-
-
 
