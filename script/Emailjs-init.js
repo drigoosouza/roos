@@ -22,7 +22,9 @@ form.addEventListener('submit', async function sendemail(e) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, lastname, email, content, message })
-    })
+      })
+
+      console.log(send)
 
 
 
@@ -54,7 +56,7 @@ form.addEventListener('submit', async function sendemail(e) {
 
     setTimeout(() => {
       popup.style.right = "-550px"
-    },5000);
+    },10000);
   }
 })
 

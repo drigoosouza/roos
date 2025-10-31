@@ -3,7 +3,7 @@ import cors from "cors"
 import nodemailer from "nodemailer"
 import dotenv from "dotenv"
 
-dotenv.config()
+dotenv.config({path:"./.env"})
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -31,14 +31,13 @@ app.post("/enviar", async (req,res)=>{
             `
         });
 
-        res.send({message: "E-mail enviado com sucesso!!"})
+        res.send({message: "E-mail enviado pelo servidor"})
         
     } catch (error) {
         console.log(error)
-        res.status(500).send({message:"Erro ao enviar o E-mail!"})
+        res.status(500).send({message:"Erro ao enviar o E-mail pelo servidor!", })
     }
 });
 
-const POST = process.env.POST || 3000
-
-app.listen(POST, ()=>console.log(`servidor rodando em http://localhost:${POST}`))
+const PORT = process.env.PORT
+app.listen(PORT, ()=>console.log(`servidor rodando em http://localhost:${PORT}`))
