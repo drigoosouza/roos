@@ -4,23 +4,21 @@ import dotenv from "dotenv"
 dotenv.config()
 
 export default async function handler(req, res) {
-  // Só aceita POST
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Método não permitido. Use POST." });
-  }
-
-  try {
 
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
+  // Só aceita POST
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Método não permitido. Use POST." });
+  }
+
     if (req.method === "OPTIONS") {
         return res.status(200).end();
     }
-    if (req.method !== "POST") {
-        return res.status(405).json({ error: "Método não permitido" });
-    }
+   
+  
     const { name, lastname, email, content, message } = req.body ?? {};
 
     // validação simples
@@ -44,6 +42,8 @@ export default async function handler(req, res) {
       subject: `Contato do site: assunto ${content}`,
       text: `Nome: ${name}\nSobrenome: ${lastname}\nEmail: ${email}\n\nMensagem:\n${message}`
     };
+
+    try {
 
     // envia o e-mail (await para garantir que terminou)
     await transporter.sendMail(mailOptions);
