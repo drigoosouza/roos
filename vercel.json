@@ -1,6 +1,6 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/enviar", "dest": "server/server.js" }
+    { "src": "/enviar", "dest": "api/enviar.js" }
   ]
 }
