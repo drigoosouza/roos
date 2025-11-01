@@ -4,7 +4,7 @@ import cors from "cors"
 
 dotenv.config();
 const Cors = cors({
-  origin: "https://roos-main-dusvbhd1h-drigoosouzas-projects.vercel.app", // só permite seu front
+  origin: "https://agenciaroos.netlify.app", // só permite seu front
   methods: ["POST", "OPTIONS"],
 });
 
