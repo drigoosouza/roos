@@ -20,7 +20,7 @@ form.addEventListener('submit', async function sendemail(e) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, lastname, email, content, message })
-      })
+      }).then((value)=>console.log({value}))
 
       console.log(send)
 
