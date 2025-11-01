@@ -19,7 +19,7 @@ app.post("/enviar", async (req,res)=>{
         }
     });
 
-    try {
+    try {   
         await tranporter.sendMail({
             from: email,
             to: process.env.EMAIL_USER,

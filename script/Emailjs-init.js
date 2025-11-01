@@ -16,7 +16,7 @@ form.addEventListener('submit', async function sendemail(e) {
   button.style.opacity = "0.7"
   
   try {
-      const send = await fetch("https://roos-main-6g8rnugq1-drigoosouzas-projects.vercel.app/enviar", {
+      const send = await fetch("/enviar", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, lastname, email, content, message })
