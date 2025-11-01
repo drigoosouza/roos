@@ -1,9 +1,25 @@
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
+import cors from "cors"
 
 dotenv.config();
+const Cors = cors({
+  origin: "https://roos-main-dusvbhd1h-drigoosouzas-projects.vercel.app", // só permite seu front
+  methods: ["POST", "OPTIONS"],
+});
+
+function runMiddleware(req, res, fn) {
+  return new Promise((resolve, reject) => {
+    fn(req, res, (result) => {
+      if (result instanceof Error) return reject(result);
+      return resolve(result);
+    });
+  });
+}
 
 export default async function handler(req, res) {
+
+    await runMiddleware(req, res, Cors);
   // 🔓 Configurações de CORS
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
